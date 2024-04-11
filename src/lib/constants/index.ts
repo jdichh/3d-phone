@@ -7,7 +7,7 @@ import {
   highlightThirdVideo,
   whiteImg,
   yellowImg,
-} from "../utils/index";
+} from "../media/index";
 
 export const navLinks = [
   {
@@ -33,19 +33,19 @@ export const featuresSlides = [
   {
     id: 2,
     textLists: [
-      "iPhone 15 Pro Max has the",
-      "longest optical zoom in iPhone history, ever.",
+      "It has the longest optical zoom",
+      "in iPhone history, ever.",
     ],
     video: highlightSecondVideo,
   },
   {
     id: 3,
-    textLists: ["Titanium.", "So strong. So light. So Pro."],
+    textLists: ["Titanium.", "It's strong. It's light. It's Pro."],
     video: highlightThirdVideo,
   },
   {
     id: 4,
-    textLists: ["All-new Action button.", "What will yours do?."],
+    textLists: ["All-new Action button.", "Multitask with ease."],
     video: highlightFourthVideo,
   },
 ];

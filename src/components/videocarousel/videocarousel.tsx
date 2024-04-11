@@ -1,12 +1,31 @@
 import { featuresSlides } from "../../lib/constants";
-const VideoCarousel = () => {
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
+const VideoCarousel = () => {
   return (
     <>
-      <div className="flex items-center">
-        {featuresSlides.map((feature) => (
-          <div key={feature.id} id="slider" className="sm:pr-20 pr-10">
-            <div className="video-carousel_container">
+      <Carousel
+        plugins={[
+          Autoplay({
+            delay: 4000,
+            stopOnInteraction: false,
+          }),
+        ]}
+        opts={{
+          loop: true,
+        }}
+      >
+        <CarouselContent>
+          {featuresSlides.map((feature) => (
+            <CarouselItem
+              className="relative basis-8/12 px-5 lg:px-10"
+              key={feature.id}
+            >
               <div className="w-full h-full flex-center rounded-2xl overflow-hidden bg-black">
                 <video
                   id="video"
@@ -15,21 +34,22 @@ const VideoCarousel = () => {
                   muted
                   loop={true}
                   autoPlay={true}
+                  className="aspect-square"
                 >
                   <source src={feature.video} type="video/webm" />
                 </video>
               </div>
-              <div className="absolute top-6 left-6 z-10">
+              <div className="absolute top-6 pl-4 z-10">
                 {feature.textLists.map((text) => (
                   <p key={text} className="text-lg md:text-xl font-medium">
                     {text}
                   </p>
                 ))}
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </>
   );
 };

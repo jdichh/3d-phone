@@ -1,5 +1,5 @@
 import { navLinks } from "../../lib/constants";
-import { appleImg } from "../../lib/utils";
+import { appleImg } from "../../lib/media";
 
 const NavBar = () => {
   return (
