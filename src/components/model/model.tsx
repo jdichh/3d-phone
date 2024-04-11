@@ -94,6 +94,7 @@ const Model = () => {
                       backgroundColor: phoneSize === size.value ? "white" : "transparent",
                       color: phoneSize === size.value ? "black" : "white",
                     }}
+                    onClick={() => setPhoneSize(size.value)}
                   >
                     {size.label}
                   </span>
