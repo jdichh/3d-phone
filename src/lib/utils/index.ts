@@ -1,7 +1,7 @@
 import hero from "/assets/images/hero.webp";
 
 import hmv from "/assets/videos/hero.webm";
-import smallmv from "/assets/videos/smallHero.webm";
+import smallmv from "/assets/videos/smallhero.webm";
 import highlightFirst from "/assets/videos/highlight1.webm";
 import highlightSec from "/assets/videos/highlight2.webm";
 import highlightThird from "/assets/videos/highlight3.webm";
@@ -25,7 +25,7 @@ import black from "/assets/images/black.webp";
 import explore1 from "/assets/images/explore1.webp";
 import explore2 from "/assets/images/explore2.webp";
 import chip from "/assets/images/chip.webp";
-import frame from "/assets/images/frame.png";
+import frame from "/assets/images/frame.webp";
 
 export const heroImg = hero;
 
