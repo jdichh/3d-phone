@@ -4,12 +4,12 @@ import NavBar from "./components/navbar/navbar";
 
 const App = () => {
   return (
-    <div className="bg-black mx-auto">
+    <div className="mx-auto">
       <NavBar />
-      <div className="max-w-[1920px] mx-auto">
+      <main className="w-full max-w-[1920px] mx-auto">
         <Hero />
         <Highlights />
-      </div>
+      </main>
     </div>
   );
 };
