@@ -21,6 +21,10 @@ canvas {
     @apply flex items-center justify-center;
   }
 
+  .screen-width {
+    @apply w-full container;
+  }
+
   .btn {
     @apply px-5 py-2 rounded-3xl my-5 bg-blue hover:scale-105 active:scale-95 transition-all;
   }
@@ -66,7 +70,7 @@ canvas {
   }
 
   .link {
-    @apply text-blue hover:underline underline-offset-4 cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
+    @apply text-blue hover:underline underline-offset-[6px] cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
   }
 
   .control-btn {

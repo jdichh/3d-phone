@@ -4,7 +4,7 @@ import { appleImg } from "../../lib/media";
 const NavBar = () => {
   return (
     <header className="w-full p-3 mx-auto sticky top-0 z-50 backdrop-blur-md border-b-[1px] border-[#3D3D3D]">
-      <nav className="container flex justify-between lg:justify-around items-center w-full">
+      <nav className="screen-width flex justify-between lg:justify-around items-center">
         <div className="flex flex-row gap-2">
           <img
             src={appleImg}

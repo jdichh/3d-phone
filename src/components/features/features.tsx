@@ -19,7 +19,7 @@ const Features = () => {
 
   return (
     <section id="features" className="common-padding overflow-hidden bg-zinc">
-      <div className="w-full container mb-12 lg:flex justify-between">
+      <div className="screen-width mb-12 lg:flex justify-between">
         <SectionHeading heading="Get the highlights." />
         <div className="lg:flex lg:items-end gap-5 ">
           <p className="link">

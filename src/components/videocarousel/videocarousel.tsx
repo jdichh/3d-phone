@@ -18,7 +18,6 @@ const VideoCarousel = () => {
         ]}
         opts={{
           align: "center",
-          loop: true
         }}
         className="max-w-full flex-center w-full h-full bg-black lg:bg-zinc"
       >
