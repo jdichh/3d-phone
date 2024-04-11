@@ -27,7 +27,7 @@ const VideoCarousel = () => {
               className="relative lg:basis-9/12"
               key={feature.id}
             >
-              <div className="lg:rounded-3xl w-full h-[500px] flex-center overflow-hidden bg-black">
+              <div className="w-full h-full max-h-[500px] flex-center overflow-hidden bg-black lg:rounded-3xl ">
                 <video
                   id="video"
                   playsInline={true}
