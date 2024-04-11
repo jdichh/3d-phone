@@ -24,28 +24,30 @@ export const featuresSlides = [
   {
     id: 1,
     textLists: [
-      "The Apple A17 Pro.",
-      "A game‑changing chip.",
+      "Enter A17 Pro.",
+      "Game‑changing chip.",
       "Groundbreaking performance.",
     ],
     video: highlightFirstVideo,
   },
   {
     id: 2,
+
+    textLists: ["Titanium.", "So strong. So light. So Pro."],
+    video: highlightThirdVideo,
+  },
+  {
+    id: 3,
     textLists: [
-      "It has the longest optical zoom",
-      "in iPhone history, ever.",
+      "iPhone 15 Pro Max has the",
+      "longest optical zoom in",
+      "iPhone ever. Far out.",
     ],
     video: highlightSecondVideo,
   },
   {
-    id: 3,
-    textLists: ["Titanium.", "It's strong. It's light. It's Pro."],
-    video: highlightThirdVideo,
-  },
-  {
     id: 4,
-    textLists: ["All-new Action button.", "Multitask with ease."],
+    textLists: ["All-new Action button.", "What will yours do?"],
     video: highlightFourthVideo,
   },
 ];

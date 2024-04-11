@@ -3,9 +3,9 @@ import hero from "/assets/images/hero.webp";
 import hmv from "/assets/videos/hero.webm";
 import smallmv from "/assets/videos/smallhero.webm";
 import highlightFirst from "/assets/videos/highlight1.webm";
-import highlightSec from "/assets/videos/highlight2.webm";
-import highlightThird from "/assets/videos/highlight3.webm";
-import highlightFourth from "/assets/videos/highlight4.webm";
+import highlightSec from "/assets/videos/highlight2.mp4";
+import highlightThird from "/assets/videos/highlight3.mp4";
+import highlightFourth from "/assets/videos/highlight4.mp4";
 import exploremv from "/assets/videos/explore.webm";
 import framemv from "/assets/videos/frame.webm";
 

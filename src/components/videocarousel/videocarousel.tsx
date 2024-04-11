@@ -12,21 +12,23 @@ const VideoCarousel = () => {
       <Carousel
         plugins={[
           Autoplay({
-            delay: 4000,
+            delay: 5000,
             stopOnInteraction: false,
           }),
         ]}
         opts={{
-          loop: true,
+          align: "center",
+          loop: true
         }}
+        className="max-w-full flex-center w-full h-full bg-black lg:bg-zinc"
       >
-        <CarouselContent>
+        <CarouselContent className="lg:container gap-12">
           {featuresSlides.map((feature) => (
             <CarouselItem
-              className="relative basis-8/12 px-5 lg:px-10"
+              className="relative lg:basis-9/12"
               key={feature.id}
             >
-              <div className="w-full h-full flex-center rounded-2xl overflow-hidden bg-black">
+              <div className="lg:rounded-3xl w-full h-[500px] flex-center overflow-hidden bg-black">
                 <video
                   id="video"
                   playsInline={true}
@@ -34,12 +36,11 @@ const VideoCarousel = () => {
                   muted
                   loop={true}
                   autoPlay={true}
-                  className="aspect-square"
                 >
                   <source src={feature.video} type="video/webm" />
                 </video>
               </div>
-              <div className="absolute top-6 pl-4 z-10">
+              <div className="absolute top-6 pl-6 z-10">
                 {feature.textLists.map((text) => (
                   <p key={text} className="text-lg md:text-xl font-medium">
                     {text}

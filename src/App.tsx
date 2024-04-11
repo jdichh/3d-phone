@@ -1,14 +1,16 @@
 import Hero from "./components/hero/hero";
 import Features from "./components/features/features";
 import NavBar from "./components/navbar/navbar";
+import Model from "./components/model/model";
 
 const App = () => {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto bg-black">
       <NavBar />
-      <main className="w-full max-w-[1920px] mx-auto">
+      <main>
         <Hero />
         <Features />
+        <Model />
       </main>
     </div>
   );

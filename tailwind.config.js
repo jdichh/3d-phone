@@ -19,11 +19,11 @@ export default {
     },
     extend: {
       colors: {
-        blue: "#2997FF",
+        blue: "#0071E3",
         gray: {
-          DEFAULT: "#86868b",
+          DEFAULT: "#CCCCCC",
           100: "#94928d",
-          200: "#afafaf",
+          200: "#86868B",
           300: "#42424570",
         },
         zinc: "#101010",
