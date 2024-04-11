@@ -22,13 +22,17 @@ const Hero = () => {
   useGSAP(() => {
     gsap.to(".hero-title", {
       opacity: 1,
-      // delay: 1.5
+      delay: 1
     });
+    gsap.to('#cta', {
+      opacity: 1,
+      delay: 1
+    })
   }, []);
 
   return (
-    <section className="outline relative nav-height">
-      <div className="flex-center flex-col outline h-5/6">
+    <section className="relative nav-height">
+      <div className="flex-center flex-col h-5/6">
         <p className="hero-title">iPhone 15 Pro</p>
         <div className="w-9/12 md:w-10/12">
           <video
@@ -42,6 +46,15 @@ const Hero = () => {
             <source src={videoSrc} type="video/webm" />
           </video>
         </div>
+      </div>
+      <div
+        id="cta"
+        className="flex flex-col items-center opacity-0"
+      >
+        <a href="#highlights" className="btn">
+          See more
+        </a>
+        <p>PHP 49,999</p>
       </div>
     </section>
   );
