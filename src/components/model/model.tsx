@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { yellowImg } from "@/lib/media";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
-import { models } from "@/lib/constants";
+import { models, sizes } from "@/lib/constants";
 import gsap from "gsap";
 import SectionHeading from "../sectionheading/sectionheading";
 import ModelView from "./modelview";
@@ -85,6 +85,20 @@ const Model = () => {
                   />
                 ))}
               </ul>
+              <button className="size-btn-container">
+                {sizes.map((size) => (
+                  <span
+                    key={size.label}
+                    className="size-btn"
+                    style={{
+                      backgroundColor: phoneSize === size.value ? "white" : "transparent",
+                      color: phoneSize === size.value ? "black" : "white",
+                    }}
+                  >
+                    {size.label}
+                  </span>
+                ))}
+              </button>
             </div>
           </div>
         </div>
