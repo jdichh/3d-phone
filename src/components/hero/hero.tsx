@@ -50,7 +50,7 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0"
       >
-        <a href="#highlights" className="btn">
+        <a href="#features" className="btn">
           See more.
         </a>
         <p>PHP 49,999</p>

@@ -9,7 +9,7 @@
 html,
 body,
 :root {
-  @apply w-dvw h-dvh overflow-x-hidden select-none text-white bg-[#121212] border-[##2c2c2c] scroll-smooth;
+  @apply w-dvw h-dvh overflow-x-hidden select-none text-white bg-zinc border-[#2c2c2c] scroll-smooth;
 }
 
 canvas {
