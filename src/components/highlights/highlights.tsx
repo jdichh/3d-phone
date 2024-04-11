@@ -1,6 +1,6 @@
 const Highlights = () => {
   return (
-    <div>Highlights</div>
+    <section id="highlights" className="h-dvh"><p>test</p></section>
   )
 }
 

@@ -3,26 +3,17 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply m-0 p-0 box-border;
 }
 
 html,
 body,
 :root {
-  color: white;
-  width: 100dvw;
-  height: 100dvh;
-  overflow-x: hidden;
-  background: #121212;
-  border-color: #2c2c2c;
-  user-select: none;
-  overflow-x: hidden;
+  @apply w-dvw h-dvh overflow-x-hidden select-none text-white bg-[#121212] border-[##2c2c2c] scroll-smooth;
 }
 
 canvas {
-  touch-action: none;
+  @apply touch-none;
 }
 
 @layer utilities {
@@ -35,7 +26,7 @@ canvas {
   }
 
   .btn {
-    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
+    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue hover:scale-110 active:scale-95 transition-all;
   }
 
   .color-container {

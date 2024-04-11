@@ -33,7 +33,7 @@ const Hero = () => {
   return (
     <section className="relative nav-height bg-black">
       <div className="flex-center flex-col h-5/6">
-        <p className="hero-title">iPhone 15 Pro</p>
+        <h1 className="hero-title">The iPhone 15 Pro.</h1>
         <div className="w-9/12 md:w-10/12">
           <video
             autoPlay
@@ -51,7 +51,7 @@ const Hero = () => {
         className="flex flex-col items-center opacity-0"
       >
         <a href="#highlights" className="btn">
-          See more
+          See more.
         </a>
         <p>PHP 49,999</p>
       </div>
