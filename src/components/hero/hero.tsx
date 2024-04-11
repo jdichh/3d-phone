@@ -5,11 +5,11 @@ import gsap from "gsap";
 
 const Hero = () => {
   const [videoSrc, setVideoSrc] = useState(
-    window.innerWidth < 760 ? smallHeroVideo : heroVideo
+    window.innerWidth < 768 ? smallHeroVideo : heroVideo
   );
 
   const handleResize = () => {
-    setVideoSrc(window.innerWidth < 760 ? smallHeroVideo : heroVideo);
+    setVideoSrc(window.innerWidth < 768 ? smallHeroVideo : heroVideo);
   };
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative nav-height">
+    <section className="relative nav-height bg-black">
       <div className="flex-center flex-col h-5/6">
         <p className="hero-title">iPhone 15 Pro</p>
         <div className="w-9/12 md:w-10/12">
@@ -40,8 +40,7 @@ const Hero = () => {
             muted
             playsInline={true}
             key={videoSrc}
-            loop
-            className="pointer-events-none"
+            className="pointer-events-none max-md:aspect-square"
           >
             <source src={videoSrc} type="video/webm" />
           </video>
