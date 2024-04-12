@@ -1,4 +1,5 @@
 import hero from "/assets/images/hero.webp";
+import apple from "/assets/images/apple.svg"
 
 import hmv from "/assets/videos/hero.webm";
 import smallmv from "/assets/videos/smallhero.webm";
@@ -22,6 +23,7 @@ import chip from "/assets/images/chip.webp";
 import frame from "/assets/images/frame.webp";
 
 export const heroImg = hero;
+export const appleImg = apple;
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;

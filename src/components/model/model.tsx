@@ -124,8 +124,8 @@ const Model = () => {
           </div>
           <div>
             <p className="model-title">{model.title}</p>
-            <div className="flex items-center justify-center">
-              <ul className="color-container">
+            <div className="model-configurator">
+              <ul className="model-configurator-color-container">
                 {models.map((item, index) => (
                   <li
                     key={index}

@@ -51,7 +51,7 @@ const ModelView = ({
         enablePan={false}
         autoRotate
         autoRotateSpeed={-1}
-        rotateSpeed={1}
+        rotateSpeed={1.5}
         target={new THREE.Vector3(0, 0, 0)}
       />
 

@@ -29,10 +29,6 @@ canvas {
     @apply px-5 py-2 rounded-3xl my-5 bg-blue hover:scale-105 active:scale-95 transition-all;
   }
 
-  .color-container {
-    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur;
-  }
-
   .size-btn-container {
     @apply flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1;
   }

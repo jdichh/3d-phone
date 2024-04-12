@@ -21,3 +21,11 @@
 .model {
   @apply opacity-0;
 }
+
+.model-configurator {
+  @apply flex items-center justify-center;
+}
+
+.model-configurator-color-container {
+  @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur;
+}
