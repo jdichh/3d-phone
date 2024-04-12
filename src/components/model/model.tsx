@@ -6,7 +6,7 @@ import { View } from "@react-three/drei";
 import { models, sizes } from "@/lib/constants";
 import gsap from "gsap";
 import SectionHeading from "../sectionheading/sectionheading";
-import ModelView from "./modelview";
+import ModelView from "./phonemodel/modelview";
 import * as THREE from "three";
 
 const Model = () => {
