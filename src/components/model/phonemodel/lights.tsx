@@ -8,49 +8,41 @@ const Lights = () => {
           <Lightformer
             form="rect"
             intensity={10}
-            position={[-1, 0, -10]}
+            position={[0, 0, -10]}
             scale={10}
             color={"#495057"}
           />
           <Lightformer
             form="rect"
             intensity={10}
-            position={[-10, 2, 1]}
+            position={[-10, 0, 0]}
             scale={10}
             rotation-y={Math.PI / 2}
           />
           <Lightformer
             form="rect"
             intensity={10}
-            position={[10, 0, 1]}
+            position={[10, 0, 0]}
             scale={10}
             rotation-y={Math.PI / 2}
           />
         </group>
       </Environment>
-
+      {/* top */}
       <spotLight
-        position={[-2, 10, 5]}
-        angle={0.15}
+        position={[0, 10, 0]}
         penumbra={1}
         decay={0}
-        intensity={Math.PI * 0.2}
-        color={"#FFF"}
+        intensity={1}
+        color={"#DDD"}
       />
+      {/* bottom */}
       <spotLight
-        position={[0, -25, 10]}
-        angle={0.15}
+        position={[0, -10, 0]}
         penumbra={1}
         decay={0}
-        intensity={Math.PI * 0.2}
-        color={"#FFF"}
-      />
-      <spotLight
-        position={[0, 15, 5]}
-        angle={0.15}
-        penumbra={1}
-        decay={0.1}
-        intensity={Math.PI * 3}
+        intensity={1}
+        color={"#DDD"}
       />
     </group>
   );

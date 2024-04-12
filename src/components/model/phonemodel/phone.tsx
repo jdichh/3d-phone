@@ -151,7 +151,6 @@ function PhoneModel(props: any) {
         material={materials.pIJKfZsazmcpEiU}
         scale={0.01}
       />
-
       <mesh
         castShadow
         receiveShadow
