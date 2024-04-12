@@ -1,5 +1,3 @@
-import hero from "/assets/images/hero.webp";
-
 import hmv from "/assets/videos/hero.webm";
 import smallmv from "/assets/videos/smallhero.webm";
 import highlightFirst from "/assets/videos/highlight1.webm";
@@ -26,8 +24,6 @@ import explore1 from "/assets/images/explore1.jpg";
 import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.webp";
 import frame from "/assets/images/frame.webp";
-
-export const heroImg = hero;
 
 export const heroVideo = hmv;
 export const smallHeroVideo = smallmv;
