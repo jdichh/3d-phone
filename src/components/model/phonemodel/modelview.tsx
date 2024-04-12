@@ -14,7 +14,6 @@ interface ModelViewProps {
   groupRef: React.MutableRefObject<THREE.Group>;
   gsapType: string;
   controlRef: React.MutableRefObject<any>;
-  setRotationValue: React.Dispatch<React.SetStateAction<number>>;
   item: {
     title: string;
     color: string[];
@@ -28,7 +27,6 @@ const ModelView = ({
   groupRef,
   gsapType,
   controlRef,
-  setRotationValue,
   item,
   size,
 }: ModelViewProps) => {
@@ -46,16 +44,17 @@ const ModelView = ({
         ref={controlRef}
         enableZoom={false}
         enablePan={false}
-        rotateSpeed={0.4}
+        autoRotate
+        autoRotateSpeed={-0.8}
+        rotateSpeed={0.8}
         target={new THREE.Vector3(0, 0, 0)}
-        onEnd={() => setRotationValue(controlRef.current.getAzimuthalAngle())}
       />
 
       <group
         ref={groupRef}
         name={`${index === 1} ? 'small' : 'large'`}
         position={[0, 0, 0]}
-        rotation={[0, 3.15, 0]}
+        rotation={[0, 3.14, 0]}
       >
         <Suspense
           fallback={

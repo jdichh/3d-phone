@@ -32,9 +32,6 @@ const Model = () => {
   const smallPhone = useRef(new THREE.Group());
   const bigPhone = useRef(new THREE.Group());
 
-  // model rotation state
-  const [smallPhoneRotation, setSmallPhoneRotation] = useState(0);
-  const [bigPhoneRotation, setBigPhoneRotation] = useState(0);
 
   return (
     <section className="common-padding">
@@ -47,7 +44,6 @@ const Model = () => {
               groupRef={smallPhone}
               gsapType="view1"
               controlRef={cameraControlSmallPhone}
-              setRotationValue={setSmallPhoneRotation}
               item={model}
               size={phoneSize}
             />
@@ -56,7 +52,6 @@ const Model = () => {
               groupRef={bigPhone}
               gsapType="view2"
               controlRef={cameraControlBigPhone}
-              setRotationValue={setBigPhoneRotation}
               item={model}
               size={phoneSize}
             />
