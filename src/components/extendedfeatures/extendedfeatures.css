@@ -37,3 +37,11 @@
 .ext-features-video {
   @apply pointer-events-none sm:w-8/12 rounded-xl;
 }
+
+.ext-features-title {
+  @apply text-4xl md:text-6xl font-semibold text-center w-9/12;
+}
+
+.ext-features-subtitle {
+  @apply text-gray-200 text-xl font-semibold text-center w-9/12;
+}

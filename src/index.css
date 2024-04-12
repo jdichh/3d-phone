@@ -69,14 +69,6 @@ canvas {
     @apply text-white text-3xl md:text-5xl font-semibold;
   }
 
-  .index-title {
-    @apply text-4xl md:text-7xl font-semibold text-center w-9/12;
-  }
-
-  .index-subtitle {
-    @apply text-gray-200 text-xl font-semibold text-center w-9/12;
-  }
-
 }
 
 /* shadcn */

@@ -1,5 +1,5 @@
 #hero-section {
-  @apply relative h-dvh bg-black flex items-center;
+  @apply w-full h-dvh bg-black relative;
 }
 
 .hero-inner-div {
@@ -11,11 +11,11 @@
 }
 
 .hero-video-div {
-  @apply w-9/12 pointer-events-none;
+  @apply w-8/12 sm:w-6/12 md:w-8/12 lg:w-9/12 pointer-events-none;
 }
 
 .hero-video {
-  @apply opacity-0;
+  @apply pointer-events-none;
 }
 
 #hero-cta {

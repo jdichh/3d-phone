@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { useState, useEffect } from "react";
-import { heroVideo, smallHeroVideo } from "@/lib/media";
+import { heroVideo, smallHeroVideo } from "../../lib/media/index";
 import gsap from "gsap";
 import "./herosection.css";
 
@@ -32,10 +32,6 @@ const Hero = () => {
     gsap.to("#hero-cta", {
       opacity: 1,
       delay: 2,
-    });
-    gsap.to(".hero-video", {
-      opacity: 1,
-      transition: 0.75,
     });
   }, []);
 

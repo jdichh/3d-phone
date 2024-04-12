@@ -10,12 +10,12 @@ const ExtendedFeatures = () => {
         </div>
 
         <hgroup className="ext-features-hgroup">
-          <h2 className="index-title">
+          <h2 className="ext-features-title">
             A17 Pro chip.
             <br /> A monster win for gaming.
           </h2>
 
-          <h3 className="index-subtitle">
+          <h3 className="ext-features-subtitle">
             It's here. The biggest redesign in the history of Apple GPUs.
           </h3>
         </hgroup>
