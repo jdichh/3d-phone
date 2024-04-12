@@ -20,7 +20,7 @@ const Highlights = () => {
   }, []);
 
   return (
-    <section id="highlights" className="common-padding highlights-section">
+    <section id="highlights" className="highlights-section">
       <div className="highlights-section-inner-div">
         <SectionHeading heading="Get the highlights." />
         <ol className="highlights-section-link-container">

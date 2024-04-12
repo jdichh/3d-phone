@@ -1,5 +1,5 @@
 .carousel {
-    @apply flex-center w-full h-full bg-black lg:bg-zinc;
+    @apply flex items-center justify-center w-full h-full bg-black lg:bg-zinc;
 }
 
 .carousel-item {
@@ -7,7 +7,7 @@
 }
 
 .carousel-item-video {
-    @apply w-full h-full max-h-[500px] flex-center overflow-hidden bg-black lg:rounded-3xl;
+    @apply w-full h-full max-h-[500px] flex items-center justify-center overflow-hidden bg-black lg:rounded-3xl;
 }
 
 .carousel-item-text-container {

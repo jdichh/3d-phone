@@ -1,5 +1,5 @@
 #features-section {
-  @apply h-full common-padding bg-zinc relative overflow-hidden;
+  @apply h-full sm:py-32 py-20 bg-zinc relative overflow-hidden;
 }
 
 .features-inner-div {
@@ -11,7 +11,7 @@
 }
 
 .features-media-container {
-  @apply flex-center flex-col;
+  @apply flex items-center justify-center flex-col;
 }
 
 .features-video-container {

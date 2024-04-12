@@ -1,9 +1,13 @@
+.ext-features-section {
+  @apply sm:py-32 py-20;
+}
+
 .ext-features-hgroup {
   @apply flex flex-col items-center gap-6;
 }
 
 .chip {
-  @apply flex-center w-full my-20;
+  @apply flex items-center justify-center w-full my-20;
 }
 
 .ext-features-figure {
@@ -15,7 +19,7 @@
 }
 
 .ext-features-figure-iphone-container {
-  @apply relative h-full flex-center;
+  @apply relative h-full flex items-center justify-center;
 }
 
 .ext-features-figure-iphone-frame {
@@ -27,7 +31,7 @@
 }
 
 .ext-features-video-container {
-  @apply absolute w-[95%] h-[90%] overflow-hidden flex-center;
+  @apply absolute w-[95%] h-[90%] overflow-hidden flex items-center justify-center;
 }
 
 .ext-features-video {

@@ -3,7 +3,7 @@
 }
 
 .hero-inner-div {
-  @apply flex-center flex-col h-full mx-auto screen-width;
+  @apply flex items-center justify-center flex-col h-full mx-auto w-full container;
 }
 
 #hero-title {

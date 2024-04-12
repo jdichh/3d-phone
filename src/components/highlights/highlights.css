@@ -1,9 +1,9 @@
 .highlights-section {
-  @apply overflow-hidden bg-zinc;
+  @apply overflow-hidden bg-zinc sm:py-32 py-20;
 }
 
 .highlights-section-inner-div {
-  @apply screen-width mb-12 lg:flex justify-between;
+  @apply w-full container mb-12 lg:flex justify-between;
 }
 
 .highlights-section-link-container {

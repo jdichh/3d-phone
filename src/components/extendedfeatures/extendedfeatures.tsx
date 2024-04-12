@@ -3,7 +3,7 @@ import "./extendedfeatures.css";
 
 const ExtendedFeatures = () => {
   return (
-    <section className="common-padding">
+    <section className="ext-features-section">
       <div className="screen-width">
         <div id="chip" className="chip">
           <img src={chipImg} alt="chip" width={180} height={180} />
@@ -48,7 +48,7 @@ const ExtendedFeatures = () => {
         </figure>
 
         <div className="index-text-container">
-          <div className="flex-center flex-1">
+          <div className="flex items-center justify-center flex-1">
             <p className="index-text">
               A17 Pro is an entirely new class of iPhone chip that delivers our{" "}
               <span className="text-white">
@@ -67,7 +67,7 @@ const ExtendedFeatures = () => {
             </p>
           </div>
 
-          <div className="flex-center flex-1 w-full">
+          <div className="flex items-center justify-center flex-1 w-full">
             <p className="index-text">
               New <br />
               <span className="index-bigtext">Pro-class GPU</span>

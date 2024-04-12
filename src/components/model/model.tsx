@@ -58,7 +58,7 @@ const Model = () => {
   }, []);
 
   return (
-    <section className="common-padding">
+    <section className="model-section">
       <div className="screen-width">
         <SectionHeading heading="Take a closer look." />
         <div className="model-inner-div">
@@ -93,7 +93,7 @@ const Model = () => {
           </div>
           <div>
             <p className="model-title">{model.title}</p>
-            <div className="flex-center">
+            <div className="flex items-center justify-center">
               <ul className="color-container">
                 {models.map((item, index) => (
                   <li
