@@ -25,8 +25,6 @@ function PhoneModel(props: any) {
         material[0] !== "xNrofRCqOXXHVZt"
       ) {
         if (
-          material[1] instanceof THREE.MeshBasicMaterial ||
-          material[1] instanceof THREE.MeshLambertMaterial ||
           material[1] instanceof THREE.MeshStandardMaterial
         ) {
           material[1].color = new THREE.Color(props.item.color[0]);
@@ -38,7 +36,7 @@ function PhoneModel(props: any) {
 
   return (
     <group {...props} dispose={null}>
-      <meshLambertMaterial roughness={1} map={texture} />
+      <meshStandardMaterial args={[{ roughness: 1, map: texture as THREE.Texture }]} />
       <mesh
         castShadow
         receiveShadow
