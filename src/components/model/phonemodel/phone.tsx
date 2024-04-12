@@ -9,7 +9,7 @@ Title: Apple iPhone 15 Pro Max Black
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
-function PhoneModel(props) {
+function PhoneModel(props: any) {
   const { nodes, materials } = useGLTF("/models/scene.glb");
   return (
     <group {...props} dispose={null}>

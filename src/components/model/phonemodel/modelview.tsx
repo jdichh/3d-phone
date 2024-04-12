@@ -1,5 +1,10 @@
 import * as THREE from "three";
-import { Html, PerspectiveCamera, View } from "@react-three/drei";
+import {
+  Html,
+  OrbitControls,
+  PerspectiveCamera,
+  View,
+} from "@react-three/drei";
 import Lights from "./lights";
 import { Suspense } from "react";
 import PhoneModel from "./phone";
@@ -8,7 +13,7 @@ interface ModelViewProps {
   index: number;
   groupRef: React.MutableRefObject<THREE.Group>;
   gsapType: string;
-  // controlRef: React.MutableRefObject<any>;
+  controlRef: React.MutableRefObject<any>;
   setRotationValue: React.Dispatch<React.SetStateAction<number>>;
   item: {
     title: string;
@@ -33,11 +38,39 @@ const ModelView = ({
       index={index}
       className={`w-full h-full ${index === 2 ? "right-[-100%]" : ""}`}
     >
-      <PerspectiveCamera/>
+      <PerspectiveCamera />
       <Lights />
-      <Suspense fallback={<Html><div>placeholder loading</div></Html>}>
-        <PhoneModel />
-      </Suspense>
+
+      <OrbitControls
+        makeDefault
+        ref={controlRef}
+        enableZoom={false}
+        enablePan={false}
+        rotateSpeed={0.4}
+        target={new THREE.Vector3(0, 0, 0)}
+        onEnd={() => setRotationValue(controlRef.current.getAzimuthalAngle())}
+      />
+
+      <group
+        ref={groupRef}
+        name={`${index === 1} ? 'small' : 'large'`}
+        position={[0, 0, 0]}
+        rotation={[0, 3.15, 0]}
+      >
+        <Suspense
+          fallback={
+            <Html>
+              <div>placeholder loading</div>
+            </Html>
+          }
+        >
+          <PhoneModel
+            scale={index === 1 ? [30, 30, 30] : [35, 35, 35]}
+            item={item}
+            size={size}
+          />
+        </Suspense>
+      </group>
     </View>
   );
 };
