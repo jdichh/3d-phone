@@ -1,15 +1,50 @@
 import { useGSAP } from "@gsap/react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { yellowImg } from "@/lib/media";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { models, sizes } from "@/lib/constants";
+import { gsapTimelineAnim } from "@/lib/anim/anim";
 import gsap from "gsap";
 import SectionHeading from "../sectionheading/sectionheading";
 import ModelView from "./phonemodel/modelview";
 import * as THREE from "three";
 
 const Model = () => {
+  // default phone states
+  const [phoneSize, setPhoneSize] = useState("small");
+  const [model, setModel] = useState({
+    title: "iPhone 15 Pro in Natural Titanium",
+    color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
+    img: yellowImg,
+  });
+
+  // 3js camera control tracker
+  const cameraControlSmallPhone = useRef();
+  const cameraControlLargePhone = useRef();
+
+  // models & model config tracker
+  const smallPhoneRef = useRef(new THREE.Group());
+  const largePhoneRef = useRef(new THREE.Group());
+
+  const tl = gsap.timeline();
+
+  useEffect(() => {
+    if (phoneSize === 'large') {
+      gsapTimelineAnim(tl, smallPhoneRef, '#view1', '#view2', {
+        transform: 'translateX(-100%)',
+        duration: 1.5
+      })
+    }
+
+    if (phoneSize === 'small') {
+      gsapTimelineAnim(tl, largePhoneRef, '#view2', '#view1', {
+        transform: 'translateX(0)',
+        duration: 1.5
+      })
+    }
+  }, [phoneSize])
+
   useGSAP(() => {
     gsap.to("#title", {
       opacity: 1,
@@ -21,21 +56,6 @@ const Model = () => {
     });
   }, []);
 
-  // default phone states
-  const [phoneSize, setPhoneSize] = useState("small");
-  const [model, setModel] = useState({
-    title: "iPhone 15 Pro in Natural Titanium",
-    color: ["#8F8A81", "#ffe7b9", "#6f6c64"],
-    img: yellowImg,
-  });
-
-  // 3js camera control tracker
-  const cameraControlSmallPhone = useRef();
-  const cameraControlBigPhone = useRef();
-
-  // models & model config tracker
-  const smallPhone = useRef(new THREE.Group());
-  const bigPhone = useRef(new THREE.Group());
 
   return (
     <section className="common-padding">
@@ -45,7 +65,7 @@ const Model = () => {
           <div className="w-full h-[75vh] md:h-[85vh] overflow-hidden relative">
             <ModelView
               index={1}
-              groupRef={smallPhone}
+              groupRef={smallPhoneRef}
               gsapType="view1"
               controlRef={cameraControlSmallPhone}
               item={model}
@@ -53,9 +73,9 @@ const Model = () => {
             />
             <ModelView
               index={2}
-              groupRef={bigPhone}
+              groupRef={largePhoneRef}
               gsapType="view2"
-              controlRef={cameraControlBigPhone}
+              controlRef={cameraControlLargePhone}
               item={model}
               size={phoneSize}
             />

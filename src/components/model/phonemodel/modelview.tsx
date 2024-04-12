@@ -35,7 +35,7 @@ const ModelView = ({
     <View
       id={gsapType}
       index={index}
-      className={`w-full h-full ${index === 2 ? "right-[-100%]" : ""}`}
+      className={`w-full h-full absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
       <PerspectiveCamera />
       <Lights />
@@ -65,7 +65,7 @@ const ModelView = ({
           }
         >
           <PhoneModel
-            scale={index === 1 ? [30, 30, 30] : [35, 35, 35]}
+            scale={index === 1 ? [30, 30, 30] : [34, 34, 34]}
             item={item}
             size={size}
           />
