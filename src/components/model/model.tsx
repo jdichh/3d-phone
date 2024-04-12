@@ -61,7 +61,7 @@ const Model = () => {
       <div className="screen-width">
         <SectionHeading heading="Take a closer look." />
         <div className="flex flex-col items-center">
-          <div className="w-full h-[60vh] overflow-hidden relative">
+          <div className="w-full overflow-hidden relative my-12 h-[60dvh]">
             <ModelView
               index={1}
               groupRef={smallPhoneRef}
@@ -79,7 +79,7 @@ const Model = () => {
               size={phoneSize}
             />
             <Canvas
-              className="w-full h-full model"
+              className="w-full model"
               style={{
                 inset: 0,
                 position: "fixed",
@@ -91,7 +91,7 @@ const Model = () => {
             </Canvas>
           </div>
           <div className="mx-auto w-full">
-            <p className="font-light text-center mb-3">{model.title}</p>
+            <p className="font-light text-center mb-4">{model.title}</p>
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, index) => (

@@ -31,6 +31,9 @@ const ModelView = ({
   item,
   size,
 }: ModelViewProps) => {
+  const large = 19;
+  const small = 16;
+
   return (
     <View
       id={gsapType}
@@ -38,7 +41,7 @@ const ModelView = ({
       className={`w-full h-full absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
       <ambientLight intensity={6} />
-      <PerspectiveCamera makeDefault position={[0, 0, 4]} />
+      <PerspectiveCamera makeDefault position={[0, 0, 3.9]} />
       <Lights />
 
       <OrbitControls
@@ -66,7 +69,7 @@ const ModelView = ({
           }
         >
           <PhoneModel
-            scale={index === 1 ? [15, 15, 15] : [19, 19, 19]}
+            scale={index === 1 ? [small, small, small] : [large, large, large]}
             item={item}
             size={size}
           />

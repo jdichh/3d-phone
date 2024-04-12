@@ -9,7 +9,11 @@ const Hero = () => {
   );
 
   const handleResize = () => {
-    setVideoSrc(window.innerWidth < 768 ? smallHeroVideo : heroVideo);
+    if(window.innerWidth < 768) {
+      setVideoSrc(smallHeroVideo)
+    } else {
+      setVideoSrc(heroVideo)
+    }
   };
 
   useEffect(() => {
@@ -36,9 +40,9 @@ const Hero = () => {
 
   return (
     <section className="relative h-dvh bg-black flex items-center">
-      <div className="flex-center flex-col h-5/6 space-y-2 mx-auto">
-        <h1 className="text-center font-semibold text-xl text-gray-100 opacity-0 max-md:mb-10" id="hero-title">iPhone 15 Pro</h1>
-        <div className="w-7/12">
+      <div className="flex-center flex-col h-full mx-auto">
+        <h1 className="text-center font-semibold text-xl text-gray-100 opacity-0 mb-4" id="hero-title">iPhone 15 Pro</h1>
+        <div className="w-9/12 sm:w-8/12 md:w-7/12">
           <video
             autoPlay
             muted
@@ -46,10 +50,10 @@ const Hero = () => {
             key={videoSrc}
             className="pointer-events-none video"
           >
-            <source src={videoSrc} type="video/mp4" />
+            <source src={videoSrc} type="video/webm" />
           </video>
         </div>
-        <div id="cta" className="flex flex-col items-center opacity-0">
+        <div id="cta" className="flex flex-col items-center opacity-0 mt-24">
           <a
             href="https://jdichh.vercel.app/#works"
             className="btn"
@@ -57,7 +61,7 @@ const Hero = () => {
           >
             Buy
           </a>
-          <p className="text-bold text-lg">From ₱70,990</p>
+          <p className="text-lg font-semibold">From ₱70,990</p>
         </div>
       </div>
     </section>

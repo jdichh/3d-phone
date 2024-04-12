@@ -22,8 +22,8 @@ import yellow from "/assets/images/yellow.webp";
 import blue from "/assets/images/blue.webp";
 import white from "/assets/images/white.webp";
 import black from "/assets/images/black.webp";
-import explore1 from "/assets/images/explore1.webp";
-import explore2 from "/assets/images/explore2.webp";
+import explore1 from "/assets/images/explore1.jpg";
+import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.webp";
 import frame from "/assets/images/frame.webp";
 

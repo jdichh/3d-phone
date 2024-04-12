@@ -20,7 +20,7 @@ export const navLinks = [
   },
 ];
 
-export const featuresSlides = [
+export const highlightsSlides = [
   {
     id: 1,
     textLists: [

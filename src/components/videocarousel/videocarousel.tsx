@@ -1,4 +1,4 @@
-import { featuresSlides } from "../../lib/constants";
+import { highlightsSlides } from "../../lib/constants";
 import {
   Carousel,
   CarouselContent,
@@ -22,10 +22,10 @@ const VideoCarousel = () => {
         className="max-w-full flex-center w-full h-full bg-black lg:bg-zinc"
       >
         <CarouselContent className="lg:container gap-12">
-          {featuresSlides.map((feature) => (
+          {highlightsSlides.map((highlight) => (
             <CarouselItem
               className="relative lg:basis-9/12"
-              key={feature.id}
+              key={highlight.id}
             >
               <div className="w-full h-full max-h-[500px] flex-center overflow-hidden bg-black lg:rounded-3xl ">
                 <video
@@ -36,11 +36,11 @@ const VideoCarousel = () => {
                   loop={true}
                   autoPlay={true}
                 >
-                  <source src={feature.video} type="video/webm" />
+                  <source src={highlight.video} type="video/webm" />
                 </video>
               </div>
               <div className="absolute top-6 pl-6 z-10">
-                {feature.textLists.map((text) => (
+                {highlight.textLists.map((text) => (
                   <p key={text} className="text-lg md:text-xl font-medium">
                     {text}
                   </p>
