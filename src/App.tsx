@@ -4,6 +4,7 @@ import NavBar from "./components/navbar/navbar";
 import Model from "./components/model/model";
 import Features from "./components/features/features";
 import ExtendedFeatures from "./components/extendedfeatures/extendedfeatures";
+import Footer from "./components/footer/footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Features />
         <ExtendedFeatures />
       </main>
+      <Footer />
     </div>
   );
 };

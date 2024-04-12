@@ -41,10 +41,6 @@ canvas {
     @apply text-gray-200 text-3xl sm:text-5xl lg:text-7xl lg:mb-0 mb-5 font-semibold opacity-0 translate-y-20;
   }
 
-  .link {
-    @apply text-blue hover:underline underline-offset-[6px] cursor-pointer flex items-center opacity-0 translate-y-20;
-  }
-
   .control-btn {
     @apply ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex items-center justify-center;
   }

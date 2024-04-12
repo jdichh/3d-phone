@@ -1,0 +1,23 @@
+.header {
+   @apply w-full p-3 mx-auto sticky top-0 z-50 backdrop-blur-md backdrop-brightness-75 border-b-[1px] border-[#3D3D3D];
+}
+
+.nav {
+    @apply w-full container flex justify-between lg:justify-around items-center;
+}
+
+.logo {
+    @apply flex flex-row gap-2;
+}
+
+.logo-span {
+    @apply font-semibold hidden sm:block;
+}
+
+.list-container {
+    @apply flex gap-12 text-gray;
+}
+
+.list-items {
+    @apply hover:text-white transition-all text-sm;
+}

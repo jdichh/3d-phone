@@ -1,0 +1,15 @@
+.footer {
+    @apply py-5 sm:px-10 px-5 border-t-[1px] border-[#3D3D3D];
+}
+
+.footer-inner-div {
+    @apply flex flex-col lg:flex-row gap-6 sm:gap-0 justify-between;
+}
+
+.footer-text {
+    @apply font-semibold text-gray text-xs;
+}
+
+.footer-link {
+    @apply text-blue hover:underline transition-all underline-offset-[3px];
+}

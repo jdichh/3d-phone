@@ -22,9 +22,9 @@ const VideoCarousel = () => {
         }}
         className="carousel"
       >
-        <CarouselContent className="lg:container gap-12">
+        <CarouselContent className="carousel-container">
           {highlightsSlides.map((highlight) => (
-            <CarouselItem className="carousel-item" key={highlight.id}>
+            <CarouselItem className="relative lg:basis-8/12" key={highlight.id}>
               <div className="carousel-item-video">
                 <video
                   id="video"
