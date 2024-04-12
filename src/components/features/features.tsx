@@ -10,19 +10,18 @@ const Features = () => {
 
   return (
     <section className="h-full common-padding bg-zinc relative overflow-hidden">
-      <div className="my-16">
         <div className="mb-24 w-full screen-width">
           <SectionHeading heading="Explore the full story." />
         </div>
 
         <div className="flex flex-col justify-start overflow-hidden">
-          <div className="mb-24 text-5xl font-semibold container pl-12 xl:pl-32 xl:text-7xl">
+          <div className="mb-24 font-semibold container pl-12 lg:pl-24 xl:pl-32 text-4xl lg:text-6xl">
             <h2>
               iPhone. <br /> Forged in titanium.
             </h2>
           </div>
 
-          <div className="flex-center flex-col xl:container xl:w-8/12">
+          <div className="flex-center flex-col lg:container">
             <div className="relative w-full flex items-center mb-6">
               <video
                 playsInline
@@ -81,7 +80,6 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };

@@ -39,9 +39,9 @@ const VideoCarousel = () => {
                   <source src={highlight.video} type="video/webm" />
                 </video>
               </div>
-              <div className="absolute top-6 pl-6 z-10">
+              <div className="absolute top-8 pl-8 z-10">
                 {highlight.textLists.map((text) => (
-                  <p key={text} className="text-lg md:text-xl font-medium">
+                  <p key={text} className="text-lg md:text-xl font-semibold leading-6">
                     {text}
                   </p>
                 ))}

@@ -21,7 +21,7 @@ const Highlights = () => {
     <section id="highlights" className="common-padding overflow-hidden bg-zinc">
       <div className="screen-width mb-12 lg:flex justify-between">
         <SectionHeading heading="Get the highlights." />
-        <div className="lg:flex lg:items-end gap-5 ">
+        <div className="lg:flex lg:items-end gap-6">
           <p className="link">
             Watch the film
             <img src={watchImg} alt="watch" className="ml-2" />

@@ -91,7 +91,7 @@ const Model = () => {
             </Canvas>
           </div>
           <div className="mx-auto w-full">
-            <p className="font-light text-center mb-4">{model.title}</p>
+            <p className="text-center mb-4 text-sm">{model.title}</p>
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, index) => (
