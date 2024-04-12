@@ -31,5 +31,5 @@
 }
 
 .ext-features-video {
-  @apply pointer-events-none aspect-video sm:w-8/12 rounded-[10vw] sm:rounded-[5vw];
+  @apply pointer-events-none sm:w-8/12 rounded-xl;
 }

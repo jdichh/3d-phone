@@ -9,7 +9,7 @@ import gsap from "gsap";
 import SectionHeading from "../sectionheading/sectionheading";
 import ModelView from "./phonemodel/modelview";
 import * as THREE from "three";
-import './model.css';
+import "./model.css";
 
 const Model = () => {
   // default phone states
