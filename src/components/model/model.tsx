@@ -61,7 +61,7 @@ const Model = () => {
       <div className="screen-width">
         <SectionHeading heading="Take a closer look." />
         <div className="flex flex-col items-center">
-          <div className="w-full h-[75vh] overflow-hidden relative">
+          <div className="w-full h-[60vh] overflow-hidden relative">
             <ModelView
               index={1}
               groupRef={smallPhoneRef}
