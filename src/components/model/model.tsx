@@ -1,10 +1,9 @@
 import { useGSAP } from "@gsap/react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, MutableRefObject } from "react";
 import { yellowImg } from "@/lib/media";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { models, sizes } from "@/lib/constants";
-import { gsapTimelineAnim } from "@/lib/anim/anim";
 import gsap from "gsap";
 import SectionHeading from "../sectionheading/sectionheading";
 import ModelView from "./phonemodel/modelview";
@@ -29,8 +28,40 @@ const Model = () => {
   const largePhoneRef = useRef(new THREE.Group());
 
   const tl = gsap.timeline();
+  const easeSetting = "power2.inOut"
 
   useEffect(() => {
+    const gsapTimelineAnim = (
+      timeline: gsap.core.Timeline,
+      rotationRef: MutableRefObject<THREE.Group<THREE.Object3DEventMap>>,
+      target1: string,
+      target2: string,
+      animProps: { transform: string; duration: number }
+    ) => {
+      timeline.to(rotationRef.current.rotation, {
+        duration: 1,
+        ease: easeSetting,
+      });
+
+      timeline.to(
+        target1,
+        {
+          ...animProps,
+          ease: easeSetting,
+        },
+        "<"
+      );
+
+      timeline.to(
+        target2,
+        {
+          ...animProps,
+          ease: easeSetting,
+        },
+        "<"
+      );
+    };
+
     if (phoneSize === "large") {
       gsapTimelineAnim(tl, smallPhoneRef, "#view1", "#view2", {
         transform: "translateX(-100%)",
