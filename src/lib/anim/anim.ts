@@ -7,14 +7,14 @@ export const gsapTimelineAnim = (
 ) => {
   timeline.to(rotationRef.current.rotation, {
     duration: 1,
-    ease: "power3.inOut",
+    ease: "power2.inOut",
   });
 
   timeline.to(
     target1,
     {
       ...animProps,
-      ease: "power3.inOut",
+      ease: "power2.inOut",
     },
     "<"
   );
@@ -23,7 +23,7 @@ export const gsapTimelineAnim = (
     target2,
     {
       ...animProps,
-      ease: "power3.inOut",
+      ease: "power2.inOut",
     },
     "<"
   );

@@ -1,0 +1,11 @@
+.highlights-section {
+  @apply overflow-hidden bg-zinc;
+}
+
+.highlights-section-inner-div {
+  @apply screen-width mb-12 lg:flex justify-between;
+}
+
+.highlights-section-link-container {
+  @apply lg:flex lg:items-end gap-6;
+}

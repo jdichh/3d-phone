@@ -9,6 +9,7 @@ import gsap from "gsap";
 import SectionHeading from "../sectionheading/sectionheading";
 import ModelView from "./phonemodel/modelview";
 import * as THREE from "three";
+import './model.css';
 
 const Model = () => {
   // default phone states
@@ -60,8 +61,8 @@ const Model = () => {
     <section className="common-padding">
       <div className="screen-width">
         <SectionHeading heading="Take a closer look." />
-        <div className="flex flex-col items-center">
-          <div className="w-full overflow-hidden relative my-12 h-[60dvh]">
+        <div className="model-inner-div">
+          <div className="model-inner-div-canvas">
             <ModelView
               index={1}
               groupRef={smallPhoneRef}
@@ -90,14 +91,14 @@ const Model = () => {
               <View.Port />
             </Canvas>
           </div>
-          <div className="mx-auto w-full">
-            <p className="text-center mb-4 text-sm">{model.title}</p>
+          <div>
+            <p className="model-title">{model.title}</p>
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, index) => (
                   <li
                     key={index}
-                    className="w-6 h-6 rounded-full mx-2 cursor-pointer hover:scale-110 hover:outline hover:outline-2 active:scale-95 transition-all"
+                    className="colors"
                     style={{ backgroundColor: item.color[0] }}
                     onClick={() => setModel(item)}
                   />

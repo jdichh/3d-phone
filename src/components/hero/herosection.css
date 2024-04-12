@@ -1,0 +1,27 @@
+#hero-section {
+  @apply relative h-dvh bg-black flex items-center;
+}
+
+.hero-inner-div {
+  @apply flex-center flex-col h-full mx-auto screen-width;
+}
+
+#hero-title {
+  @apply text-center font-semibold text-xl text-gray-100 opacity-0 mb-4;
+}
+
+.hero-video-div {
+  @apply w-9/12 pointer-events-none;
+}
+
+.hero-video {
+  @apply opacity-0;
+}
+
+#hero-cta {
+  @apply flex flex-col items-center opacity-0 mt-24;
+}
+
+.hero-price {
+  @apply text-lg font-semibold;
+}

@@ -1,0 +1,39 @@
+#features-section {
+  @apply h-full common-padding bg-zinc relative overflow-hidden;
+}
+
+.features-inner-div {
+  @apply flex flex-col justify-start overflow-hidden;
+}
+
+.features-h2 {
+  @apply mb-24 font-semibold container pl-12 lg:pl-24 xl:pl-32 text-4xl lg:text-6xl;
+}
+
+.features-media-container {
+  @apply flex-center flex-col;
+}
+
+.features-video-container {
+  @apply relative w-full flex items-center mb-6;
+}
+
+.features-video {
+  @apply w-full h-full object-cover object-center;
+}
+
+.features-data-container {
+  @apply flex flex-col w-full relative;
+}
+
+.feature-img-container {
+  @apply w-full flex flex-col md:flex-row gap-6;
+}
+
+.features-img-div-container {
+  @apply overflow-hidden flex-1;
+}
+
+.feature-div-img {
+  @apply w-full h-full object-cover;
+}

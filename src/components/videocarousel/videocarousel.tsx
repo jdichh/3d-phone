@@ -5,6 +5,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import "./videocarousel.css";
 
 const VideoCarousel = () => {
   return (
@@ -19,15 +20,12 @@ const VideoCarousel = () => {
         opts={{
           align: "center",
         }}
-        className="max-w-full flex-center w-full h-full bg-black lg:bg-zinc"
+        className="carousel"
       >
         <CarouselContent className="lg:container gap-12">
           {highlightsSlides.map((highlight) => (
-            <CarouselItem
-              className="relative lg:basis-9/12"
-              key={highlight.id}
-            >
-              <div className="w-full h-full max-h-[500px] flex-center overflow-hidden bg-black lg:rounded-3xl ">
+            <CarouselItem className="carousel-item" key={highlight.id}>
+              <div className="carousel-item-video">
                 <video
                   id="video"
                   playsInline={true}
@@ -39,9 +37,9 @@ const VideoCarousel = () => {
                   <source src={highlight.video} type="video/webm" />
                 </video>
               </div>
-              <div className="absolute top-8 pl-8 z-10">
+              <div className="carousel-item-text-container">
                 {highlight.textLists.map((text) => (
-                  <p key={text} className="text-lg md:text-xl font-semibold leading-6">
+                  <p key={text} className="carousel-item-text">
                     {text}
                   </p>
                 ))}

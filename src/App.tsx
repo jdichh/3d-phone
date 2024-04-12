@@ -3,6 +3,7 @@ import Highlights from "./components/highlights/highlights";
 import NavBar from "./components/navbar/navbar";
 import Model from "./components/model/model";
 import Features from "./components/features/features";
+import ExtendedFeatures from "./components/extendedfeatures/extendedfeatures";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Highlights />
         <Model />
         <Features />
+        <ExtendedFeatures />
       </main>
     </div>
   );

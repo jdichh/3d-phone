@@ -1,0 +1,19 @@
+.carousel {
+    @apply flex-center w-full h-full bg-black lg:bg-zinc;
+}
+
+.carousel-item {
+    @apply relative lg:basis-9/12;
+}
+
+.carousel-item-video {
+    @apply w-full h-full max-h-[500px] flex-center overflow-hidden bg-black lg:rounded-3xl;
+}
+
+.carousel-item-text-container {
+    @apply absolute top-8 pl-8 z-10;
+}
+
+.carousel-item-text {
+    @apply text-lg md:text-xl font-semibold leading-6;
+}

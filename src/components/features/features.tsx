@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { explore1Img, explore2Img, exploreVideo } from "@/lib/media";
 import SectionHeading from "../sectionheading/sectionheading";
 import gsap from "gsap";
+import "./features.css";
 
 const Features = () => {
   useGSAP(() => {
@@ -9,53 +10,54 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="h-full common-padding bg-zinc relative overflow-hidden">
-        <div className="mb-24 w-full screen-width">
+    <section id="features-section">
+      <div className="screen-width">
+        <div className="mb-24">
           <SectionHeading heading="Explore the full story." />
         </div>
 
-        <div className="flex flex-col justify-start overflow-hidden">
-          <div className="mb-24 font-semibold container pl-12 lg:pl-24 xl:pl-32 text-4xl lg:text-6xl">
+        <div className="features-inner-div">
+          <div className="features-h2">
             <h2>
               iPhone. <br /> Forged in titanium.
             </h2>
           </div>
 
-          <div className="flex-center flex-col lg:container">
-            <div className="relative w-full flex items-center mb-6">
+          <div className="features-media-container">
+            <div className="features-video-container">
               <video
                 playsInline
                 id="exploreVideo"
-                className="w-full h-full object-cover object-center"
+                className="features-video"
                 preload="none"
                 muted
                 autoPlay
               >
-                <source src={exploreVideo} type="video/mp4" />
+                <source src={exploreVideo} type="video/webm" />
               </video>
             </div>
 
-            <div className="flex flex-col w-full relative">
-              <div className="feature-item-container">
-                <div className="overflow-hidden flex-1">
+            <div className="features-data-container">
+              <div className="feature-img-container">
+                <div className="features-img-div-container">
                   <img
                     src={explore1Img}
                     alt="titanium"
-                    className="feature-item"
+                    className="feature-div-img"
                   />
                 </div>
-                <div className="overflow-hidden flex-1">
+                <div className="features-img-div-container">
                   <img
                     src={explore2Img}
                     alt="titanium 2"
-                    className="feature-item"
+                    className="feature-div-img"
                   />
                 </div>
               </div>
 
-              <div className="feature-text-container screen-width">
-                <div className="flex-1 flex justify-center">
-                  <p className="feature-text">
+              <div className="index-text-container">
+                <div className="index-text-container-div">
+                  <p className="index-text">
                     iPhone 15 Pro is{" "}
                     <span className="text-white">
                       the first iPhone to feature an aerospace-grade titanium
@@ -66,8 +68,8 @@ const Features = () => {
                   </p>
                 </div>
 
-                <div className="flex-1 flex justify-center">
-                  <p className="feature-text">
+                <div className="index-text-container-div">
+                  <p className="index-text">
                     Titanium has one of the best strength-to-weight ratios of
                     any metal, making these our{" "}
                     <span className="text-white">
@@ -80,6 +82,7 @@ const Features = () => {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 };

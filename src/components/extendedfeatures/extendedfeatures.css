@@ -1,0 +1,35 @@
+.ext-features-hgroup {
+  @apply flex flex-col items-center gap-6;
+}
+
+.chip {
+  @apply flex-center w-full my-20;
+}
+
+.ext-features-figure {
+  @apply mt-10 md:mt-20 mb-14;
+}
+
+.ext-features-figcaption {
+  @apply text-gray-200 font-semibold text-center mt-3;
+}
+
+.ext-features-figure-iphone-container {
+  @apply relative h-full flex-center;
+}
+
+.ext-features-figure-iphone-frame {
+  @apply overflow-hidden sm:w-8/12;
+}
+
+.ext-features-figure-iphone-frame-img {
+  @apply bg-transparent relative z-10;
+}
+
+.ext-features-video-container {
+  @apply absolute w-[95%] h-[90%] overflow-hidden flex-center;
+}
+
+.ext-features-video {
+  @apply pointer-events-none aspect-video sm:w-8/12 rounded-[10vw] sm:rounded-[5vw];
+}
