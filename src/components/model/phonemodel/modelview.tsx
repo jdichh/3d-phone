@@ -8,6 +8,7 @@ import {
 import Lights from "./lights";
 import { Suspense } from "react";
 import PhoneModel from "./phone";
+import Loading from "@/components/loading/loading";
 
 interface ModelViewProps {
   index: number;
@@ -59,7 +60,7 @@ const ModelView = ({
         <Suspense
           fallback={
             <Html>
-              <div>placeholder loading</div>
+              <Loading/>
             </Html>
           }
         >

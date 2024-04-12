@@ -15,6 +15,10 @@ const Model = () => {
       opacity: 1,
       y: 0,
     });
+
+    gsap.to(".model", {
+      opacity: 1,
+    });
   }, []);
 
   // default phone states
@@ -56,7 +60,7 @@ const Model = () => {
               size={phoneSize}
             />
             <Canvas
-              className="w-full h-full"
+              className="w-full h-full model"
               style={{
                 inset: 0,
                 position: "fixed",
@@ -86,7 +90,8 @@ const Model = () => {
                     key={size.label}
                     className="size-btn"
                     style={{
-                      backgroundColor: phoneSize === size.value ? "white" : "transparent",
+                      backgroundColor:
+                        phoneSize === size.value ? "white" : "transparent",
                       color: phoneSize === size.value ? "black" : "white",
                     }}
                     onClick={() => setPhoneSize(size.value)}

@@ -108,6 +108,10 @@ canvas {
   .video {
     @apply opacity-0
   }
+
+  .model {
+    @apply opacity-0
+  }
 }
 
 /* shadcn */
