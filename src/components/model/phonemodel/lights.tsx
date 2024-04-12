@@ -7,21 +7,21 @@ const Lights = () => {
         <group>
           <Lightformer
             form="rect"
-            intensity={10}
+            intensity={20}
             position={[0, 0, -10]}
-            scale={10}
+            scale={1}
             color={"#495057"}
           />
           <Lightformer
             form="rect"
-            intensity={10}
+            intensity={20}
             position={[-10, 0, 0]}
             scale={10}
             rotation-y={Math.PI / 2}
           />
           <Lightformer
             form="rect"
-            intensity={10}
+            intensity={20}
             position={[10, 0, 0]}
             scale={10}
             rotation-y={Math.PI / 2}
@@ -33,7 +33,7 @@ const Lights = () => {
         position={[0, 10, 0]}
         penumbra={1}
         decay={0}
-        intensity={1}
+        intensity={10}
         color={"#DDD"}
       />
       {/* bottom */}
@@ -41,7 +41,7 @@ const Lights = () => {
         position={[0, -10, 0]}
         penumbra={1}
         decay={0}
-        intensity={1}
+        intensity={10}
         color={"#DDD"}
       />
     </group>

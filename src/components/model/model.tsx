@@ -30,20 +30,20 @@ const Model = () => {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    if (phoneSize === 'large') {
-      gsapTimelineAnim(tl, smallPhoneRef, '#view1', '#view2', {
-        transform: 'translateX(-100%)',
-        duration: 1.5
-      })
+    if (phoneSize === "large") {
+      gsapTimelineAnim(tl, smallPhoneRef, "#view1", "#view2", {
+        transform: "translateX(-100%)",
+        duration: 1.5,
+      });
     }
 
-    if (phoneSize === 'small') {
-      gsapTimelineAnim(tl, largePhoneRef, '#view2', '#view1', {
-        transform: 'translateX(0)',
-        duration: 1.5
-      })
+    if (phoneSize === "small") {
+      gsapTimelineAnim(tl, largePhoneRef, "#view2", "#view1", {
+        transform: "translateX(0)",
+        duration: 1.5,
+      });
     }
-  }, [phoneSize])
+  }, [phoneSize]);
 
   useGSAP(() => {
     gsap.to("#title", {
@@ -56,13 +56,12 @@ const Model = () => {
     });
   }, []);
 
-
   return (
     <section className="common-padding">
       <div className="screen-width">
         <SectionHeading heading="Take a closer look." />
-        <div className="flex flex-col items-center mt-5">
-          <div className="w-full h-[75vh] md:h-[85vh] overflow-hidden relative">
+        <div className="flex flex-col items-center">
+          <div className="w-full h-[75vh] overflow-hidden relative">
             <ModelView
               index={1}
               groupRef={smallPhoneRef}
@@ -92,13 +91,13 @@ const Model = () => {
             </Canvas>
           </div>
           <div className="mx-auto w-full">
-            <p className="font-light text-center mb-5">{model.title}</p>
+            <p className="font-light text-center mb-3">{model.title}</p>
             <div className="flex-center">
               <ul className="color-container">
                 {models.map((item, index) => (
                   <li
                     key={index}
-                    className="w-6 h-6 rounded-full mx-2 cursor-pointer"
+                    className="w-6 h-6 rounded-full mx-2 cursor-pointer hover:scale-110 hover:outline hover:outline-2 active:scale-95 transition-all"
                     style={{ backgroundColor: item.color[0] }}
                     onClick={() => setModel(item)}
                   />

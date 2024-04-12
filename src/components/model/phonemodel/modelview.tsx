@@ -37,7 +37,8 @@ const ModelView = ({
       index={index}
       className={`w-full h-full absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
-      <PerspectiveCamera />
+      <ambientLight intensity={6} />
+      <PerspectiveCamera makeDefault position={[0, 0, 4]} />
       <Lights />
 
       <OrbitControls
@@ -46,8 +47,8 @@ const ModelView = ({
         enableZoom={false}
         enablePan={false}
         autoRotate
-        autoRotateSpeed={-0.8}
-        rotateSpeed={0.8}
+        autoRotateSpeed={-1}
+        rotateSpeed={1}
         target={new THREE.Vector3(0, 0, 0)}
       />
 
@@ -60,12 +61,12 @@ const ModelView = ({
         <Suspense
           fallback={
             <Html>
-              <Loading/>
+              <Loading />
             </Html>
           }
         >
           <PhoneModel
-            scale={index === 1 ? [30, 30, 30] : [34, 34, 34]}
+            scale={index === 1 ? [15, 15, 15] : [19, 19, 19]}
             item={item}
             size={size}
           />
