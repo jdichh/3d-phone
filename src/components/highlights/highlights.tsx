@@ -1,28 +1,54 @@
-import { useGSAP } from "@gsap/react";
+// import { useGSAP } from "@gsap/react";
+// import { ScrollTrigger } from "gsap/all";
+// import gsap from "gsap";
 import { rightImg, watchImg } from "@/lib/media";
-import gsap from "gsap";
+import { useRef } from "react";
 import VideoCarousel from "../videocarousel/videocarousel";
-import SectionHeading from "../sectionheading/sectionheading";
 import "./highlights.css";
 
+// gsap.registerPlugin(ScrollTrigger);
+
 const Highlights = () => {
-  useGSAP(() => {
-    gsap.to("#title", {
-      opacity: 1,
-      y: 0,
-    });
-    gsap.to(".highlights-link", {
-      opacity: 1,
-      y: 0,
-      duration: 0.75,
-      stagger: 0.25,
-    });
-  }, []);
+  const headingRef = useRef<HTMLDivElement | null>(null);
+
+  // useGSAP(() => {
+  //   if (headingRef.current) {
+  //     const headings = gsap.utils.toArray(headingRef.current.children);
+
+  //     headings.forEach((heading) => {
+  //       gsap.to(heading as Element, {
+  //         y: 0,
+  //         opacity: 1,
+  //         scrollTrigger: {
+  //           trigger: heading as Element,
+  //           start: "top bottom",
+  //           end: "bottom 80%",
+  //           scrub: 0.5,
+  //         },
+  //         ease: "power1.inOut",
+  //       });
+  //       gsap.to(".highlights-link", {
+  //         opacity: 1,
+  //         y: 0,
+  //         scrollTrigger: {
+  //           trigger: heading as Element,
+  //           start: "top bottom",
+  //           end: "bottom 80%",
+  //           scrub: 0.5,
+  //         },
+  //         ease: "power1.inOut",
+  //       });
+  //     });
+  //   }
+  // }, []);
 
   return (
     <section id="highlights" className="highlights-section">
-      <div className="highlights-section-inner-div">
-        <SectionHeading heading="Get the highlights." />
+      <div className="highlights-section-inner-div" ref={headingRef}>
+        <h2 className="highlights-section-heading" id="title">
+          Get the highlights.
+        </h2>
+
         <ol className="highlights-section-link-container">
           <li className="highlights-link">
             Watch the film

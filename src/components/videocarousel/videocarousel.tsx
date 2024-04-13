@@ -34,7 +34,7 @@ const VideoCarousel = () => {
                   loop={true}
                   autoPlay={true}
                 >
-                  <source src={highlight.video} type="video/webm" />
+                  <source src={highlight.video} type="video/mp4" />
                 </video>
               </div>
               <div className="carousel-item-text-container">

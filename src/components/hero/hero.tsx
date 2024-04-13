@@ -47,7 +47,7 @@ const Hero = () => {
             key={videoSrc}
             className="hero-video"
           >
-            <source src={videoSrc} type="video/webm" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
         </div>
         <div id="hero-cta">

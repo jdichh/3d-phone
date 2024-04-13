@@ -2,6 +2,10 @@
   @apply sm:py-32 py-20;
 }
 
+.model-section-heading {
+  @apply text-gray-200 text-3xl sm:text-5xl lg:text-7xl lg:mb-0 mb-5 font-semibold;
+}
+
 .model-inner-div {
   @apply flex flex-col items-center;
 }
@@ -16,10 +20,6 @@
 
 .colors {
   @apply w-6 h-6 rounded-full mx-2 cursor-pointer hover:scale-110 hover:outline hover:outline-2 active:scale-95 transition-all;
-}
-
-.model {
-  @apply opacity-0;
 }
 
 .model-configurator {

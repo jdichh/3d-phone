@@ -33,7 +33,7 @@ const Lights = () => {
         position={[0, 10, 0]}
         penumbra={1}
         decay={0}
-        intensity={10}
+        intensity={20}
         color={"#DDD"}
       />
       {/* bottom */}
@@ -41,7 +41,7 @@ const Lights = () => {
         position={[0, -10, 0]}
         penumbra={1}
         decay={0}
-        intensity={10}
+        intensity={20}
         color={"#DDD"}
       />
     </group>

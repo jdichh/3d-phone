@@ -1,14 +1,14 @@
 import hero from "/assets/images/hero.webp";
 import apple from "/assets/images/apple.svg"
 
-import hmv from "/assets/videos/hero.webm";
-import smallmv from "/assets/videos/smallhero.webm";
-import highlightFirst from "/assets/videos/highlight1.webm";
-import highlightSec from "/assets/videos/highlight2.webm";
-import highlightThird from "/assets/videos/highlight3.webm";
-import highlightFourth from "/assets/videos/highlight4.webm";
-import exploremv from "/assets/videos/explore.webm";
-import framemv from "/assets/videos/frame.webm";
+import hmv from "/assets/videos/hero.mp4";
+import smallmv from "/assets/videos/smallhero.mp4";
+import highlightFirst from "/assets/videos/highlight1.mp4";
+import highlightSec from "/assets/videos/highlight2.mp4";
+import highlightThird from "/assets/videos/highlight3.mp4";
+import highlightFourth from "/assets/videos/highlight4.mp4";
+import explore from "/assets/images/explore.webp";
+import inFrame from "/assets/images/in-frame.webp";
 
 import watch from "/assets/images/watch.svg";
 import right from "/assets/images/right.svg";
@@ -31,8 +31,8 @@ export const highlightFirstVideo = highlightFirst;
 export const highlightSecondVideo = highlightSec;
 export const highlightThirdVideo = highlightThird;
 export const highlightFourthVideo = highlightFourth;
-export const exploreVideo = exploremv;
-export const frameVideo = framemv;
+export const exploreImg = explore;
+export const inFrameImg = inFrame;
 
 export const watchImg = watch;
 export const rightImg = right;

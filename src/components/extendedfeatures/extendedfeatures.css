@@ -30,12 +30,12 @@
   @apply bg-transparent relative z-10;
 }
 
-.ext-features-video-container {
+.ext-features-img-container {
   @apply absolute w-[95%] h-[90%] overflow-hidden flex items-center justify-center;
 }
 
-.ext-features-video {
-  @apply pointer-events-none sm:w-8/12 rounded-xl;
+.ext-features-img {
+  @apply pointer-events-none sm:w-8/12 rounded-2xl md:rounded-3xl lg:rounded-[3rem];
 }
 
 .ext-features-title {

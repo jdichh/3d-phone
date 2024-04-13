@@ -1,19 +1,14 @@
-import { useGSAP } from "@gsap/react";
-import { explore1Img, explore2Img, exploreVideo } from "@/lib/media";
-import SectionHeading from "../sectionheading/sectionheading";
-import gsap from "gsap";
+import { explore1Img, explore2Img, exploreImg } from "@/lib/media";
 import "./features.css";
 
 const Features = () => {
-  useGSAP(() => {
-    gsap.to("#title", { y: 0, opacity: 1 });
-  }, []);
-
   return (
     <section id="features-section">
       <div className="screen-width">
         <div className="mb-24">
-          <SectionHeading heading="Explore the full story." />
+          <h2 className="features-section-heading" id="title">
+            Explore the full story.
+          </h2>
         </div>
 
         <div className="features-inner-div">
@@ -24,17 +19,8 @@ const Features = () => {
           </div>
 
           <div className="features-media-container">
-            <div className="features-video-container">
-              <video
-                playsInline
-                id="exploreVideo"
-                className="features-video"
-                preload="none"
-                muted
-                autoPlay
-              >
-                <source src={exploreVideo} type="video/webm" />
-              </video>
+            <div className="features-img-container">
+              <img src={exploreImg} className="features-img" alt="A picture of a corner of the iPhone 15." />
             </div>
 
             <div className="features-data-container">
@@ -42,14 +28,14 @@ const Features = () => {
                 <div className="features-img-div-container">
                   <img
                     src={explore1Img}
-                    alt="titanium"
+                    alt="A picture of the cameras of the iPhone 15."
                     className="feature-div-img"
                   />
                 </div>
                 <div className="features-img-div-container">
                   <img
                     src={explore2Img}
-                    alt="titanium 2"
+                    alt="A picture of the Action Button of the iPhone 15."
                     className="feature-div-img"
                   />
                 </div>

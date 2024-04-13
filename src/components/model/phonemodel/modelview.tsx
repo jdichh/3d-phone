@@ -17,6 +17,7 @@ interface ModelViewProps {
   controlRef: React.MutableRefObject<any>;
   item: {
     title: string;
+    title2: string;
     color: string[];
     img: string;
   };
@@ -31,8 +32,8 @@ const ModelView = ({
   item,
   size,
 }: ModelViewProps) => {
-  const large = 19;
-  const small = 16;
+  const large = 0.95;
+  const small = 0.85;
 
   return (
     <View
@@ -40,8 +41,8 @@ const ModelView = ({
       index={index}
       className={`w-full h-full absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
-      <ambientLight intensity={6} />
-      <PerspectiveCamera makeDefault position={[0, 0, 3.9]} />
+      <ambientLight intensity={7} />
+      <PerspectiveCamera makeDefault position={[0, 0, 0.2]} />
       <Lights />
 
       <OrbitControls
@@ -49,17 +50,19 @@ const ModelView = ({
         ref={controlRef}
         enableZoom={false}
         enablePan={false}
+        rotateSpeed={3}
         autoRotate
-        autoRotateSpeed={-1}
-        rotateSpeed={1.5}
+        autoRotateSpeed={-2.5}
         target={new THREE.Vector3(0, 0, 0)}
+        minPolarAngle={0.8}
+        maxPolarAngle={Math.PI - 0.8}
       />
 
       <group
         ref={groupRef}
         name={`${index === 1} ? 'small' : 'large'`}
         position={[0, 0, 0]}
-        rotation={[0, 3.14, 0]}
+        rotation={[0, 0, 0]}
       >
         <Suspense
           fallback={

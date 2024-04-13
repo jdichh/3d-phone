@@ -1,4 +1,4 @@
-import { chipImg, frameImg, frameVideo } from "@/lib/media";
+import { chipImg, frameImg, inFrameImg } from "@/lib/media";
 import "./extendedfeatures.css";
 
 const ExtendedFeatures = () => {
@@ -6,7 +6,7 @@ const ExtendedFeatures = () => {
     <section className="ext-features-section">
       <div className="screen-width">
         <div id="chip" className="chip">
-          <img src={chipImg} alt="chip" width={180} height={180} />
+          <img src={chipImg} alt="A picture of the A17 chip." width={180} height={180} />
         </div>
 
         <hgroup className="ext-features-hgroup">
@@ -25,25 +25,20 @@ const ExtendedFeatures = () => {
             <div className="ext-features-figure-iphone-frame">
               <img
                 src={frameImg}
-                alt="The iPhone 15 Pro, which is currently being displayed to play a video."
+                alt="The iPhone 15's frame, which is currently being displayed to play a video."
                 className="ext-features-figure-iphone-frame-img"
               />
             </div>
-            <div className="ext-features-video-container">
-              <video
-                className="ext-features-video"
-                playsInline
-                preload="none"
-                muted
-                autoPlay
-                loop={true}
-              >
-                <source src={frameVideo} type="video/webm" />
-              </video>
+            <div className="ext-features-img-container">
+              <img
+                src={inFrameImg}
+                className="ext-features-img"
+                alt="Asphalt 9 in-game"
+              />
             </div>
           </div>
           <figcaption className="ext-features-figcaption">
-            Honkai: Star Rail
+            Asphalt 9: Legends
           </figcaption>
         </figure>
 

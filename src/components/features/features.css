@@ -2,6 +2,10 @@
   @apply h-full sm:py-32 py-20 bg-zinc relative overflow-hidden;
 }
 
+.features-section-heading {
+  @apply text-gray-200 text-3xl sm:text-5xl lg:text-7xl lg:mb-0 mb-5 font-semibold;
+}
+
 .features-inner-div {
   @apply flex flex-col justify-start overflow-hidden;
 }
@@ -14,11 +18,11 @@
   @apply flex items-center justify-center flex-col;
 }
 
-.features-video-container {
+.features-img-container {
   @apply relative w-full flex items-center mb-6;
 }
 
-.features-video {
+.features-img {
   @apply w-full h-full object-cover object-center;
 }
 

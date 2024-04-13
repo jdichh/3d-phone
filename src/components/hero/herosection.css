@@ -3,7 +3,7 @@
 }
 
 .hero-inner-div {
-  @apply flex items-center justify-center flex-col h-full mx-auto w-full container;
+  @apply flex items-center justify-center flex-col h-full mx-auto w-full container mt-8;
 }
 
 #hero-title {
@@ -19,7 +19,7 @@
 }
 
 #hero-cta {
-  @apply flex flex-col items-center opacity-0 mt-24;
+  @apply flex flex-col items-center opacity-0 mb-24;
 }
 
 .hero-price {
